@@ -1,0 +1,18 @@
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+.Container {
+	align-self: center;
+	margin: 0 auto;
+	background-image: url('https://www.treehugger.com/thmb/7KYmuAKvOj3cDpRK47BMO8rwUDU=/768x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/__opt__aboutcom__coeus__resources__content_migration__treehugger__images__2019__08__clouds-2dcb0f4cf2934a48bd173b6474c4784c.jpg');
+	width: 50%;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
