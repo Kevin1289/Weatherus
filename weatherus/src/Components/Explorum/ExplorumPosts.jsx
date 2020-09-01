@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Route, BrowserRouter as Router, Link, Switch } from 'react-router-dom';
 
 class Posts extends Component {
 	state = {};
 	MAP = () => {
 		if (this.props.Load === 'True') {
 			let sto = this.props.Posts_data;
-			// console.log('sto: ', sto);
 			if (this.props.Posts_data !== {}) {
 				return Object.keys(sto).map((item, i) => {
 					return (

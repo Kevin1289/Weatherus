@@ -8,10 +8,8 @@ import Explorum from './Components/Explorum/Explorum_Body';
 
 class App extends Component {
 	constructor(props) {
-		// console.log('CONSTRUCTORRRR');
 		super(props);
 		this.state = {
-			// SignedIn: 'No',
 			firebase: '',
 			redirect: false,
 		};
@@ -42,13 +40,6 @@ class App extends Component {
 						</Route>
 					</Switch>
 				</Router>
-				{/* from_forum={this.props.location.aboutProps} */}
-				{/* <div className="card" style={{ margin: 'auto', width: '43%', marginBottom: '.5%' }}>
-				<div className="card-header" style={{ fontSize: '30px' }}>
-					Local Weather
-				</div>
-				
-			</div> */}
 				<footer style={{ margin: 'auto', marginBottom: '.5%' }}>Ⓒ 2020 Shi Xin (Kevin) Wu</footer>
 			</div>
 		);
@@ -56,17 +47,3 @@ class App extends Component {
 }
 
 export default App;
-
-// function LogIn() {
-// 	return (
-// 		<div className="card" style={{ margin: 'auto', width: '43%', marginBottom: '.5%' }}>
-// 			<div className="card-header" style={{ fontSize: '30px' }}>
-// 				Log In / Sign Up
-// 			</div>
-// 			<h1>IN APP.JS</h1>
-// 			<SigninProcess />
-// 		</div>
-// 	);
-// }
-
-// export { LogIn };

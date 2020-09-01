@@ -9,10 +9,8 @@ import { Route, BrowserRouter as Router, Link, Switch } from 'react-router-dom';
 
 class WeatherHome extends Component {
 	constructor(props) {
-		// console.log('C?ONSTRUCTORRRR');
 		super(props);
 		this.state = {
-			// SignedIn: 'Loading',
 			database: this.props.database,
 			api_key: 'b337f3f4ac21bd71f328fe87749ffce5',
 			stat: {
@@ -53,9 +51,7 @@ class WeatherHome extends Component {
 		const Call_return = await api_call.json();
 		console.log('after API', Call_return, 'COD:', Call_return.cod);
 		if (City && Country) {
-			// console.log('IN City and Country');
 			if (Call_return.cod === 200) {
-				// console.log('PERFECTTT');
 				try {
 					this.setState({
 						stat: {
@@ -73,14 +69,10 @@ class WeatherHome extends Component {
 							X: Call_return.coord.lon,
 							Y: Call_return.coord.lat,
 							Show: true,
-							// Errors: '',
 						},
 						Errors: '',
-						// Data: { Data: Call_return },
 					});
 				} catch (error) {
-					// let Errors = this.state.Errors;
-					// Errors.push(error);
 					this.SetError();
 				}
 			} else {

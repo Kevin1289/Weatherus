@@ -9,7 +9,6 @@ import Button from 'react-bootstrap/Button';
 
 class Explorum extends Component {
 	constructor(props) {
-		// console.log('C?ONSTRUCTORRRR');
 		super(props);
 		this.state = {
 			Errors: '',
@@ -21,7 +20,6 @@ class Explorum extends Component {
 				fdsafasfxcsfd: 'rtewtw',
 			},
 		};
-		// this.SignedInStat();
 	}
 
 	Clean_string = (text) => {
@@ -49,20 +47,14 @@ class Explorum extends Component {
 	}
 
 	NewPost = (e) => {
-		// console.log('IN NEW_Post');
 		e.preventDefault();
 		const Name = e.target.elements.Name.value;
-		// console.log('NAMEEEEEEEEE:', JSON.stringify(e.target.elements.Name.value));
 		const City = e.target.elements.City.value;
 		const Country = e.target.elements.Country.value;
 		const Activity = e.target.elements.Activity.value;
 		const Description = e.target.elements.Description.value;
 		const Together = Name + City + Country + Description + Activity;
-		// console.log(
-		// 	Name !== '' && City !== '' && Country !== '' && Activity !== '' && Description !== '' && Together !== ''
-		// );
 		if (Name !== '' && City !== '' && Country !== '' && Activity !== '' && Description !== '' && Together !== '') {
-			// console.log('IN');
 			let Time = this.modify_time(new Date().toLocaleTimeString());
 			let Datee = new Date().toLocaleDateString();
 			let Post_id = this.Clean_string(Name) + this.Clean_string(Time) + this.Clean_string(Datee);
@@ -78,7 +70,6 @@ class Explorum extends Component {
 			this.setState({ Errors: '' });
 			return <Link to="Forum"></Link>;
 		} else {
-			// console.log('OUT');
 			this.setState({ Errors: 'Please Fill In All The Avaliable Fields!' });
 		}
 	};
@@ -86,16 +77,12 @@ class Explorum extends Component {
 	componentDidMount() {
 		let sto = {};
 		let database = db.ref('Explorum');
-		// console.log(database);
 		database.on('value', (snap) => {
-			// console.log(snap.val());
-			// sto = snap.val();
 			this.setState({
 				Posts_data: snap.val(),
 				load: 'True',
 			});
 		});
-		// console.log('STO: ', sto);
 	}
 
 	Show_Errors = () => {
@@ -109,7 +96,6 @@ class Explorum extends Component {
 	render() {
 		return (
 			<React.Fragment>
-				{/* {console.log('BODY:', this.state.Posts_data)} */}
 				<Link to="/Weather">
 					<Button style={{ fontSize: '20px', width: '30%', marginLeft: 'auto', marginRight: 'auto' }}>
 						Check the Weather

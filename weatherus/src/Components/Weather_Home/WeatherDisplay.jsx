@@ -18,14 +18,13 @@ const WeatherDisplay = (props) => {
 		Y,
 	} = props.info;
 	let Errors = props.Errors;
+
 	if (Show === true) {
-		// console.log('Show is True');
+		//Something is Searched
 		if (Errors === '') {
-			// console.log('Error is blank');
 			try {
 				return (
 					<React.Fragment>
-						{/* <h1>IN WeatherDisplay</h1> */}
 						<h1>
 							{City}, {Country} - {Temp}℉
 						</h1>
@@ -53,22 +52,18 @@ const WeatherDisplay = (props) => {
 			} catch (error) {
 				return (
 					<React.Fragment>
-						{/* {console.log({ error })} */}
 						<h1>Error! Please Double Check Your Entered Location.</h1>
 					</React.Fragment>
 				);
 			}
 		} else {
-			// console.log('Error is not blank');
 			return (
 				<React.Fragment>
-					{/* {console.log(Error)} */}
 					<h1>{Errors}</h1>
 				</React.Fragment>
 			);
 		}
 	} else {
-		// console.log('Show is False');
 		return <h1>Please Enter a valid City and its Country</h1>;
 	}
 };

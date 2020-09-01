@@ -15,7 +15,6 @@ class Form extends Component {
 				<br></br>
 				<br></br>
 				<Button
-					// onClick={(e) => e.preventDefault()}
 					id="Main_map_button"
 					type="submit"
 					className="Submit"
@@ -23,7 +22,6 @@ class Form extends Component {
 				>
 					Get Weather
 				</Button>
-				{/* <button className="Submit">Get Weather</button> */}
 			</form>
 		);
 	}
